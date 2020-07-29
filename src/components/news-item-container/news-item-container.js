@@ -8,6 +8,7 @@ export const NewsItemContainer = ({ selectedLink }) => {
   const [newsItems, setNewsItems] = useState([]);
   const [fetchLimitData, setFetchLimitData] = useState(30);
   const [loaded, setLoaded] = useState(true);
+  const [selectLink, setSelectLink] = useState(selectedLink);
 
   useEffect(() => {
     (async () => {
@@ -16,7 +17,12 @@ export const NewsItemContainer = ({ selectedLink }) => {
       setNewsItems(items);
       setLoaded(true);
     })();
-  }, [fetchLimitData, selectedLink]);
+
+    if (selectedLink !== selectLink) {
+      setSelectLink(selectedLink);
+      setFetchLimitData(30);
+    }
+  }, [fetchLimitData, selectedLink, selectLink]);
 
   const onClickLoadMore = async () => {
     await setFetchLimitData(fetchLimitData + 30);
@@ -47,7 +53,11 @@ export const NewsItemContainer = ({ selectedLink }) => {
         newsItems.map((newsItem, index) => (
           <NewsItem key={newsItem} id={newsItem} srNo={index + 1} />
         ))}
-      {newsItems && <button onClick={onClickLoadMore}>Load More</button>}
+      {newsItems && (
+        <button className="load-more-button" onClick={onClickLoadMore}>
+          Load More
+        </button>
+      )}
     </div>
   );
 };

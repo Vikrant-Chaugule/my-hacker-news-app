@@ -1,13 +1,26 @@
 .news-item {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #828282;
+}
+
+.gray-arrow {
+  display: inline-block;
+  margin: 0 2px;
 }
 
 .heading-row {
-    font-size: 15px;
+  font-size: 13px;
+}
+
+.heading-row a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
 }
 
 .info-row {
-    font-size: 12px;
+  font-size: 10px;
 }

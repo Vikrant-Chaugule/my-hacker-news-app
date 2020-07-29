@@ -4,6 +4,17 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: white;
   z-index: 9999;
+}
+
+.load-more-button {
+  background-color: #ff6600;
+
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin: 0 5px;
+  padding: 5px;
 }
