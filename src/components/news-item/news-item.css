@@ -1,7 +1,7 @@
 .news-item {
   display: flex;
   flex-direction: row;
-  padding: 10px;
+  padding: 5px;
   font-family: Verdana, Geneva, sans-serif;
   color: #828282;
 }
@@ -23,4 +23,9 @@
 
 .info-row {
   font-size: 10px;
+}
+
+.url-section {
+  font-size: 10px;
+  color: #828282;
 }

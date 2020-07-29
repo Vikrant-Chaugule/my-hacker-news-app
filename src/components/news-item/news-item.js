@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './news-item.css';
 import { fetchStoryById } from '../../api/api';
 import grayArrow from '../../assets/gray-arrow.gif';
+import { formatTime } from '../../utils/formatTIme';
+import { formatUrl } from '../../utils/formatUrl';
 
 export const NewsItem = (props) => {
   const { srNo, id } = props;
@@ -24,13 +26,14 @@ export const NewsItem = (props) => {
       <div>
         <div className="heading-row ">
           <a href={newsInfo.url} target="_blank" rel="noopener noreferrer">
-            {newsInfo.title}
+            {newsInfo.title}{' '}
+            <span className="url-section">({formatUrl(newsInfo.url)})</span>
           </a>
         </div>
         <div className="info-row">
           <span>{newsInfo.score} points </span>
           <span>by {newsInfo.by} </span>
-          <span>{newsInfo.time} ago </span>
+          <span>{formatTime(newsInfo.time)} ago </span>
           <span>type - {newsInfo.type} </span>
         </div>
       </div>
