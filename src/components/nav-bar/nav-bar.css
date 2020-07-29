@@ -1,0 +1,26 @@
+.nav-bar {
+  background-color: #ff6600;
+}
+
+.nav-bar span {
+  margin: 0 5px;
+}
+
+.nav-bar button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin: 0 5px;
+}
+
+#heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.selectedLinkCss {
+  color: white;
+}

@@ -4,4 +4,10 @@
     padding: 10px;
 }
 
-.heading-row {}
+.heading-row {
+    font-size: 15px;
+}
+
+.info-row {
+    font-size: 12px;
+}
